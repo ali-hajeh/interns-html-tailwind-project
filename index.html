@@ -3,124 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML & Tailwind CSS Learning Task</title>
+    <title>Stylish HTML & Tailwind CSS Page</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @layer base {
             :root {
-                --color-primary: #4f46e5;
-                --color-secondary: #06b6d4;
+                --color-primary: #6d28d9;
+                --color-secondary: #0ea5e9;
+            }
+        }
+
+        @layer utilities {
+            .glass-effect {
+                @apply bg-white/10 backdrop-blur-md shadow-lg border border-white/20;
+            }
+
+            .gradient-bg {
+                background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+            }
+
+            .scale-hover {
+                @apply transition-transform transform hover:scale-105;
+            }
+
+            .glow-hover {
+                transition: all 0.3s ease-in-out;
+            }
+            .glow-hover:hover {
+                box-shadow: 0px 4px 20px rgba(109, 40, 217, 0.4);
             }
         }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen p-8">
-    <!-- Header Section -->
-    <header class="max-w-4xl mx-auto mb-12">
-        <h1 class="text-4xl font-bold text-gray-800 mb-4">HTML & Tailwind CSS Learning Task</h1>
-        <p class="text-lg text-gray-600">Welcome to this interactive learning exercise! You'll learn how to style HTML elements using Tailwind CSS utility classes.</p>
+<body class="gradient-bg min-h-screen p-8 text-white transition-colors duration-300" id="body">
+    <header class="max-w-4xl mx-auto mb-12 text-center">
+        <h1 class="text-5xl font-bold mb-4">HTML & Tailwind CSS Learning Task</h1>
+        <p class="text-lg text-gray-200">Explore the power of Tailwind CSS with this interactive, modern web page.</p>
     </header>
 
-    <!-- Reference Section -->
-    <section class="max-w-4xl mx-auto mb-16 bg-white p-8 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Reference Section</h2>
-        
-        <!-- Card Example -->
-        <div class="mb-12">
-            <h3 class="text-xl font-semibold text-gray-700 mb-4">Example Card Component</h3>
-            <div class="bg-white border border-gray-200 rounded-xl shadow-sm p-6 max-w-sm">
-                <h4 class="text-lg font-semibold text-gray-800 mb-2">Card Title</h4>
-                <p class="text-gray-600 mb-4">This is an example of a card component styled with Tailwind CSS.</p>
-                <button class="bg-[var(--color-primary)] text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-colors">
-                    Click Me
-                </button>
-            </div>
-        </div>
+    <button onclick="toggleDarkMode()" class="fixed top-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition">
+        Toggle Dark Mode
+    </button>
 
-        <!-- Button Styles Example -->
-        <div class="mb-12">
-            <h3 class="text-xl font-semibold text-gray-700 mb-4">Button Variations</h3>
-            <div class="flex gap-4 flex-wrap">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
-                    Primary Button
-                </button>
-                <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300">
-                    Secondary Button
-                </button>
-                <button class="border border-blue-500 text-blue-500 px-4 py-2 rounded-md hover:bg-blue-50">
-                    Outline Button
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Exercise Section -->
-    <section class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Your Tasks</h2>
-        
-        <!-- Task 1 -->
-        <div class="mb-12">
-            <h3 class="text-xl font-semibold text-gray-700 mb-4">Task 1: Create a Profile Card</h3>
-            <p class="text-gray-600 mb-4">Create a profile card in the space below. It should include:</p>
-            <ul class="list-disc list-inside text-gray-600 mb-6">
-                <li>A circular profile image placeholder</li>
-                <li>A name with large, bold text</li>
-                <li>A job title in gray text</li>
-                <li>A short bio</li>
-                <li>A "Connect" button</li>
-            </ul>
-            <!-- Student workspace -->
-            <div class="border-2 border-dashed border-gray-300 p-6 rounded-lg">
-                <!-- Start coding here -->
-                
-            </div>
-        </div>
-
-        <!-- Task 2 -->
-        <div class="mb-12">
-            <h3 class="text-xl font-semibold text-gray-700 mb-4">Task 2: Style a Navigation Menu</h3>
-            <p class="text-gray-600 mb-4">Create a horizontal navigation menu with the following requirements:</p>
-            <ul class="list-disc list-inside text-gray-600 mb-6">
-                <li>Should be full width</li>
-                <li>Include 4 menu items</li>
-                <li>Add hover effects</li>
-                <li>Make it responsive</li>
-            </ul>
-            <!-- Student workspace -->
-            <div class="border-2 border-dashed border-gray-300 p-6 rounded-lg">
-                <!-- Start coding here -->
-                
-            </div>
-        </div>
-
-        <!-- Task 3 -->
-        <div class="mb-12">
-            <h3 class="text-xl font-semibold text-gray-700 mb-4">Task 3: Create a Feature Grid</h3>
-            <p class="text-gray-600 mb-4">Create a grid of feature cards with these specifications:</p>
-            <ul class="list-disc list-inside text-gray-600 mb-6">
-                <li>2x2 grid layout</li>
-                <li>Each card should have an icon, title, and description</li>
-                <li>Add subtle hover effects</li>
-                <li>Make it responsive for mobile (stack cards)</li>
-            </ul>
-            <!-- Student workspace -->
-            <div class="border-2 border-dashed border-gray-300 p-6 rounded-lg">
-                <!-- Start coding here -->
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Help Section -->
-    <section class="max-w-4xl mx-auto mt-12 bg-white p-8 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Helpful Tips</h2>
-        <ul class="space-y-4 text-gray-600">
-            <li><span class="font-semibold">Spacing:</span> Use m-{size} for margin and p-{size} for padding</li>
-            <li><span class="font-semibold">Colors:</span> Use text-{color}-{shade} for text and bg-{color}-{shade} for backgrounds</li>
-            <li><span class="font-semibold">Flexbox:</span> Use flex, items-center, justify-center for alignment</li>
-            <li><span class="font-semibold">Grid:</span> Use grid grid-cols-{number} for grid layouts</li>
-            <li><span class="font-semibold">Responsive:</span> Use sm:, md:, lg: prefixes for responsive design</li>
+    <nav class="glass-effect p-4 mb-8 max-w-3xl mx-auto rounded-lg">
+        <ul class="flex justify-around text-white text-lg">
+            <li><a href="#" class="hover:text-gray-300 transition">Home</a></li>
+            <li><a href="#" class="hover:text-gray-300 transition">About</a></li>
+            <li><a href="#" class="hover:text-gray-300 transition">Services</a></li>
+            <li><a href="#" class="hover:text-gray-300 transition">Contact</a></li>
         </ul>
+    </nav>
+
+    <section class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-xl text-gray-900">
+        <h2 class="text-3xl font-bold mb-6">Your Tasks</h2>
+
+        <!-- Profile Card -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold text-gray-700 mb-4">Task 1: Create a Profile Card</h3>
+            <div class="border-2 border-gray-200 p-6 rounded-lg glow-hover bg-white text-gray-900">
+                <div class="flex items-center space-x-6">
+                    <img class="w-36 h-36 rounded-full shadow-lg border-4 border-gray-300" 
+                         src="https://www.bing.com/th?id=OIP.3c2Rldc0IIh1D42K0k-ynwHaE7&w=150&h=106&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" 
+                         alt="A Girl in Computer Engineering">
+                    <div>
+                        <h3 class="text-2xl font-bold">Hamis Bayram</h3>
+                        <p class="text-gray-600">Computer Engineer</p>
+                        <p class="text-gray-500 mt-2">Passionate about building websites & mobile apps. Always eager to learn and grow.</p>
+                        <button class="mt-4 px-5 py-2 rounded-md bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold hover:from-purple-700 hover:to-indigo-700 transition">
+                            Connect
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature Grid -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold text-gray-700 mb-4">Task 3: Create a Feature Grid</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-lg text-center hover:bg-gray-100 transition scale-hover text-gray-900">
+                    <img class="mx-auto mb-4 w-12 h-12" src="https://cdn-icons-png.flaticon.com/512/1064/1064984.png" alt="Responsive Design">
+                    <h4 class="text-lg font-semibold">Responsive Design</h4>
+                    <p class="text-gray-600">Ensures a seamless experience across devices.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-lg text-center hover:bg-gray-100 transition scale-hover text-gray-900">
+                    <img class="mx-auto mb-4 w-12 h-12" src="https://cdn-icons-png.flaticon.com/512/272/272528.png" alt="Dark Mode">
+                    <h4 class="text-lg font-semibold">Dark Mode</h4>
+                    <p class="text-gray-600">Allows users to switch between light and dark themes.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-lg text-center hover:bg-gray-100 transition scale-hover text-gray-900">
+                    <img class="mx-auto mb-4 w-12 h-12" src="https://cdn-icons-png.flaticon.com/512/891/891419.png" alt="Offline Mode">
+                    <h4 class="text-lg font-semibold">Offline Mode</h4>
+                    <p class="text-gray-600">Lets users access key features without an internet connection.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-lg text-center hover:bg-gray-100 transition scale-hover text-gray-900">
+                    <img class="mx-auto mb-4 w-12 h-12" src="https://cdn-icons-png.flaticon.com/512/2942/2942923.png" alt="Multi-language Support">
+                    <h4 class="text-lg font-semibold">Multi-language Support</h4>
+                    <p class="text-gray-600">Provides translations for a global audience.</p>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.getElementById('body');
+            if (body.classList.contains("gradient-bg")) {
+                body.classList.remove("gradient-bg");
+                body.classList.add("bg-gray-900");
+            } else {
+                body.classList.remove("bg-gray-900");
+                body.classList.add("gradient-bg");
+            }
+        }
+    </script>
 </body>
-</html> 
+</html>
