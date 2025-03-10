@@ -13,6 +13,9 @@
             }
         }
     </style>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
 </head>
 <body class="bg-gray-50 min-h-screen p-8">
     <!-- Header Section -->
@@ -70,10 +73,19 @@
                 <li>A "Connect" button</li>
             </ul>
             <!-- Student workspace -->
-            <div class="border-2 border-dashed border-gray-300 p-6 rounded-lg">
+            <div id ="e" class="border-2 border-dashed border-gray-300 p-6 rounded-lg ">
                 <!-- Start coding here -->
-                
+                 <img class ="w-48 h-48 mx-auto rounded-full border-4 border-gray-300" src="https://cdn1.vectorstock.com/i/1000x1000/09/20/profile-placeholder-female-avatar-in-blue-tones-vector-29980920.jpg"  alt="picture"/>
+                <h2 class="text-3xl font-bold">Sara Mawla</h2>
+                <p class="text-gray-600">Computer Engineering</p>
+                <p class="">Passionate Computer Engineer aspiring to excel in software development and secure a role at Noya Company</p>
+                <button class="bg-[var(--color-primary)] text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-colors">
+                    Connect
+                </button>
             </div>
+            <style>
+                #e{background-color: rgba(229, 244, 240, 0.774);}
+            </style>
         </div>
 
         <!-- Task 2 -->
@@ -89,9 +101,18 @@
             <!-- Student workspace -->
             <div class="border-2 border-dashed border-gray-300 p-6 rounded-lg">
                 <!-- Start coding here -->
-                
-            </div>
-        </div>
+              <nav class ="bg-blue-400 text-black w-full">
+            <div class="container mx-auto px-3">
+            <div class="flex justify-between items-center py-4">
+    <ul class="flex flex-col md:flex-row justify-between items-center text-lg text-lg w-full">
+<li><a href='#' class="block px-4 py-2 border-b md:border-m border-white hover:bg-white">home</a></li>
+<li><a href='#' class="block px-4 py-2 border-b md:border-m border-white hover:bg-white ">about</a></li>
+<li><a href='#' class="block px-4 py-2 border-b md:border-m border-white hover:bg-white">services</a></li>
+<li><a href='#' class="block px-4 py-2 border-b md:border-m border-white hover:bg-white">contact</a></li>
+    </ul>
+</nav>
+ </div>
+</div>
 
         <!-- Task 3 -->
         <div class="mb-12">
@@ -106,9 +127,44 @@
             <!-- Student workspace -->
             <div class="border-2 border-dashed border-gray-300 p-6 rounded-lg">
                 <!-- Start coding here -->
-                
-            </div>
-        </div>
+                 <div class="grid grid-cols-2 gap-6 md:grid-cols-2 sm:grid-cols-1">
+            <div class="bg-blue-400 rounded-lg hover:shadow-xl transition-all">
+             <div class="text-center mb-4">
+             <div class="text-3xl text-black mb-4">
+            <i class="fas fa-check"></i>
+              </div>
+              <h4 class="text-xl font-semibold text-black mb-2">Task complete</h4>
+             <p class="text-white">you've successfully completed this task</p>
+  </div>
+</div>
+                 <div class="bg-blue-400 rounded-lg hover:shadow-xl transition-all">
+                    <div class="text-center mb-4">
+                        <div class="text-3xl text-black mb-4">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-black mb-2">New Notification</h4>
+                        <p class="text-white">you have a new notification</p>
+     </div>       
+</div>
+                                 <div class="bg-blue-400 rounded-lg hover:shadow-xl transition-all">
+                                    <div class="text-center mb-4">
+                                        <div class="text-3xl text-black mb-4">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                        <h4 class="text-lg font-semibold text-black mb-2">Add new items</h4>
+                                        <p class="text-white">Click here to add a new item to your list</p>
+     </div>
+ </div>
+                 <div class="bg-blue-400 rounded-lg hover:shadow-xl transition-all">
+                         <div class="text-center mb-4">
+                        <div class="text-3xl text-black mb-4">
+                        <i class="fas fa-minus"></i>
+                         </div>
+                        <h4 class="text-lg font-semibold text-black mb-2">remove items</h4>
+                      <p class="text-white">Click here to remove item</p>
+                     </div>
+    </div>
+ </div>                        
     </section>
 
     <!-- Help Section -->
