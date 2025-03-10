@@ -71,6 +71,13 @@
             </ul>
             <!-- Student workspace -->
             <div class="border-2 border-dashed border-gray-300 p-6 rounded-lg">
+                <img class="w-48 h-48 mx-auto rounded-full border-4 border-gray-200" src="./picture.png">
+                <h2 class="text-3xl font-bold">Malak Mallah</h2>
+                 <p class="text-gray-600 mb-4">Computer and Communication Engineering</p>
+                 <p class="">I aspire to become a skilled and proficient web developer and programmer.</p>
+                <button class="bg-[var(--color-primary)] text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-colors">
+                    Connect
+                </button>
                 <!-- Start coding here -->
                 
             </div>
@@ -89,7 +96,30 @@
             <!-- Student workspace -->
             <div class="border-2 border-dashed border-gray-300 p-6 rounded-lg">
                 <!-- Start coding here -->
-                
+                   <nav class="bg-gray-800 p-4 flex justify-between items-center">
+                <div class="text-white text-xl font-bold">LOGO</div>
+                <ul class="hidden md:flex space-x-6 text-white">
+                    <li><a href="#" class="hover:text-orange-400">Home</a></li>
+                    <li><a href="#" class="hover:text-orange-400">About</a></li>
+                    <li><a href="#" class="hover:text-orange-400">Services</a></li>
+                    <li><a href="#" class="hover:text-orange-400">Contact</a></li>
+                </ul>
+                <div class="md:hidden text-white text-2xl cursor-pointer" id="menu-toggle">☰</div>
+            </nav>
+            <ul class="hidden flex-col items-center bg-gray-800 text-white w-full py-4 space-y-4 md:hidden" id="mobile-menu">
+                <li><a href="#" class="hover:text-orange-400">Home</a></li>
+                <li><a href="#" class="hover:text-orange-400">About</a></li>
+                <li><a href="#" class="hover:text-orange-400">Services</a></li>
+                <li><a href="#" class="hover:text-orange-400">Contact</a></li>
+            </ul>
+            <script>
+                const menuToggle = document.getElementById('menu-toggle');
+                const mobileMenu = document.getElementById('mobile-menu');
+                menuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            </script>
+
             </div>
         </div>
 
@@ -106,8 +136,28 @@
             <!-- Student workspace -->
             <div class="border-2 border-dashed border-gray-300 p-6 rounded-lg">
                 <!-- Start coding here -->
-                
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                <div class="text-orange-500 text-4xl mb-4">🚗</div>
+                <h3 class="text-xl font-semibold mb-2">Live Parking Updates</h3>
+                <p class="text-gray-600 text-center">Get real-time information on parking availability.</p>
             </div>
+            <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                <div class="text-orange-500 text-4xl mb-4">📍</div>
+                <h3 class="text-xl font-semibold mb-2">Smart Navigation</h3>
+                <p class="text-gray-600 text-center">Navigate to your selected parking spot easily.</p>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                <div class="text-orange-500 text-4xl mb-4">🔐</div>
+                <h3 class="text-xl font-semibold mb-2">Secure Parking</h3>
+                <p class="text-gray-600 text-center">Reserve private spots with ease and security.</p>
+            </div>
+           <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                <div class="text-orange-500 text-4xl mb-4">💰</div>
+                <h3 class="text-xl font-semibold mb-2">Affordable Pricing</h3>
+                <p class="text-gray-600 text-center">Find the best deals on parking and save money.</p>
+           </div>
+        </div>
         </div>
     </section>
 
